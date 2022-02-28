@@ -119,8 +119,8 @@ function GeneralContent() {
           Authorization: "Bearer " + localStorage.getItem("token"),
         },
         params: {
-          idtype,
-          idstatus,
+          type:idtype,
+          status:idstatus,
         },
       })
       .then((res) => {
