@@ -1,0 +1,45 @@
+.container {
+  display: grid;
+  width: 100%;
+}
+
+.header {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  height: 8vh;
+  -moz-box-shadow: 0 0 5px 0 #ccc;
+  -webkit-box-shadow: 0 0 5px 0 #ccc;
+  box-shadow: 0 0 10px 0 #ccc;
+}
+
+.content {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: grid;
+    padding-top: 1.5%;
+    grid-row-gap: 1em;
+}
+
+.site-title {
+  font-size: 2em;
+  font-weight: 650;
+  padding-left: 5%;
+  color: #128dd2;
+}
+
+.disconnectLink{
+    padding-left: 75%;
+}
+
+.footer {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 8vh;
+  width: 100%;
+  background-color: #88D4FF;
+  color: white;
+  text-align: center;
+}
