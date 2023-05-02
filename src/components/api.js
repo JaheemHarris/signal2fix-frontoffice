@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-    baseURL: 'https://signal2fix-rest-ws.herokuapp.com/api/v1'
+    baseURL: 'http://localhost:9005/api/v1'
 });
 
 export default api;

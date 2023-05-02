@@ -54,7 +54,7 @@ function Login() {
     return(
         <div className="grid-container" id="container">
             <div className="grid-item">
-                <span className="site-title">Signal2Fix</span>
+                <span className="site-title">Report2Fix</span>
             </div>
             <div className="grid-item">
                 <span className="connect-title">Connectez-vous</span>
@@ -65,7 +65,7 @@ function Login() {
                         <div className="grid-item login-input">
                             <label>Adresse Email</label>
                             <input type="text" className="form-control" onChange={e => setEmail(e.target.value)} />
-                        </div >
+                        </div>
                         <div className="grid-item login-input">
                             <label>Mot de passe</label>
                             <input type="password" className="form-control" onChange={e => setPassword(e.target.value)}/>

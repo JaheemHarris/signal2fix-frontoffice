@@ -74,8 +74,8 @@ function Carte(props) {
     lat: -16.2349278,
     lng: 46.1292672,
   });
-  const [zoomLevel, setZoomLevel] = useState(8);
-  const MIN_ZOOM_LEVEL = 8;
+  const [zoomLevel, setZoomLevel] = useState(5);
+  const MIN_ZOOM_LEVEL = 0;
   const mapRef = useRef();
 
   return (
