@@ -16,10 +16,13 @@ function Fiche() {
       navigate("/home");
     };
 
+
     let {id} = useParams();
+    console.log(id);
 
     useEffect(() => {
       getSignalementById();
+      console.log(signalement);
     },[]);
 
     const getSignalementById = () =>{
@@ -29,7 +32,10 @@ function Fiche() {
           Authorization: "Bearer "+localStorage.getItem('token')
         }
       }).then((res)=>{
-        setSignalement(res.data);
+        console.log(res);
+        setSignalement(res.data[0]);
+      }).catch((error) => {
+        console.log(error);
       });
     }
 
@@ -43,6 +49,8 @@ function Fiche() {
       }).then((res)=>{
         console.log(res);
         setSignalement(res.data);
+      }).catch((error) => {
+        console.log(error);
       });
     }
 
@@ -78,10 +86,10 @@ function Fiche() {
           <Grid
             style={{ paddingLeft: "35%", fontSize: "75%", fontWeight: "bold" }}
           >
-            <p>Type : {signalement?.type || "Test"}</p>
-            <p>Status : {signalement?.status || "tsisy"}</p>
-            <p>Date : {signalement?.dateSignalement || "tsisy"}</p>
-            <p>Description : {signalement?.description || "tsisy"}</p>
+            <p>Type : {signalement?.type}</p>
+            <p>Status : {signalement?.status}</p>
+            <p>Date : {signalement?.dateSignalement}</p>
+            <p>Description : {signalement?.description}</p>
           </Grid>
           <Grid container style={{ paddingTop: "2%" }}>
             <Grid item md={6} style={{ paddingLeft: "30%" }}>
